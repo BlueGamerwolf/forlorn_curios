@@ -73,7 +73,7 @@
       "name": "BlueOrbkeybindOnKeyPressed",
       "type": "procedure",
       "sortid": 6,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "blue_orbkeybind_on_key_pressed",
       "metadata": {
@@ -87,7 +87,7 @@
       "name": "BlueOrbkeybind",
       "type": "keybind",
       "sortid": 7,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "blue_orbkeybind",
       "metadata": {
@@ -114,7 +114,7 @@
       "name": "BlueOrbCooldown",
       "type": "procedure",
       "sortid": 9,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "blue_orb_cooldown",
       "metadata": {

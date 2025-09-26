@@ -15,7 +15,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-import net.mcreator.forlorncurios.network.BlueOrbkeybindMessage;
 import net.mcreator.forlorncurios.ForlornCuriosMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
