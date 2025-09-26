@@ -1,0 +1,78 @@
+{
+  "mod_elements": [
+    {
+      "name": "BlueOrbBaubleIsEquipped",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_orb_bauble_is_equipped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/forlorncurios/procedures/BlueOrbBaubleIsEquippedProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "BlueOrbBaubleIsUnequipped",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_orb_bauble_is_unequipped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/forlorncurios/procedures/BlueOrbBaubleIsUnequippedProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "BlueOrb",
+      "type": "curiosbauble",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_orb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/forlorncurios/item/BlueOrbItem.java",
+          "src/main/resources/assets/forlorn_curios/models/item/blue_orb.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.forlorn_curios.blue_orb": "Blue Orb"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "forlorn_curios",
+    "modName": "Forlorn_Curios",
+    "version": "1.0.0",
+    "author": "bluem, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "curios_api"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.forlorncurios",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}
