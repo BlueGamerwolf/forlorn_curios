@@ -45,7 +45,7 @@
       "name": "BlueOrbBaubleIsEquipped",
       "type": "procedure",
       "sortid": 4,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "blue_orb_bauble_is_equipped",
       "metadata": {
@@ -73,7 +73,7 @@
       "name": "BlueOrbkeybindOnKeyPressed",
       "type": "procedure",
       "sortid": 6,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "blue_orbkeybind_on_key_pressed",
       "metadata": {
@@ -87,7 +87,7 @@
       "name": "BlueOrbkeybind",
       "type": "keybind",
       "sortid": 7,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "blue_orbkeybind",
       "metadata": {
@@ -100,7 +100,7 @@
       "name": "BlueOrbActiveAbility",
       "type": "procedure",
       "sortid": 8,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "blue_orb_active_ability",
       "metadata": {
@@ -114,7 +114,7 @@
       "name": "BlueOrbCooldown",
       "type": "procedure",
       "sortid": 9,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "blue_orb_cooldown",
       "metadata": {

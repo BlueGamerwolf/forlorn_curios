@@ -7,7 +7,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.level.Level;
 
 import net.mcreator.forlorncurios.procedures.BlueOrbActiveAbility;
 import net.mcreator.forlorncurios.ForlornCuriosMod;
@@ -45,12 +44,12 @@ public class BlueOrbKeybindMessage {
     }
 
     @SubscribeEvent
-    public static void register() {
-    ForlornCuriosMod.addNetworkMessage(
-        BlueOrbKeybindMessage.class,
-        BlueOrbKeybindMessage::buffer,
-        BlueOrbKeybindMessage::new,
-        BlueOrbKeybindMessage::handler
-    );
-}
+    public static void register(FMLCommonSetupEvent event) {
+        ForlornCuriosMod.addNetworkMessage(
+                BlueOrbKeybindMessage.class,
+                BlueOrbKeybindMessage::buffer,
+                BlueOrbKeybindMessage::new,
+                BlueOrbKeybindMessage::handler
+        );
+    }
 }

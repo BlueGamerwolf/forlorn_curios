@@ -51,18 +51,10 @@ public class ForlornCuriosMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		ForlornCuriosModItems.REGISTRY.register(bus);
+
 		ForlornCuriosModTabs.REGISTRY.register(bus);
-    	
-		bus.addListener(this::commonSetup);
 
 	}
-
-	private void commonSetup(final FMLCommonSetupEvent event) {
-    event.enqueueWork(() -> {
-        net.mcreator.forlorncurios.network.BlueOrbKeybindMessage.register();
-    });
-}
-
 
 	private static final String PROTOCOL_VERSION = "1";
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);

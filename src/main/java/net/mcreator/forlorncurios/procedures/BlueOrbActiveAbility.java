@@ -14,21 +14,16 @@ import java.util.List;
 
 public class BlueOrbActiveAbility {
 
-    // Cooldown tracker
     private static final String COOLDOWN_TAG = "BlueOrbCooldown";
-    private static final int COOLDOWN_TICKS = 600; // 30 seconds (20 ticks/sec)
+    private static final int COOLDOWN_TICKS = 600; // 30 seconds
 
     public static void execute(Player player) {
         if (player == null) return;
+        if (getCooldown(player) > 0) return;
 
-        if (player.getPersistentData().getInt(COOLDOWN_TAG) > 0) {
-            return; // Still on cooldown
-        }
+        double range = 6.0;
+        float damage = 8f;
 
-        double range = 6.0; // shockwave radius
-        float damage = 8f; // damage amount
-
-        // Deal damage to nearby mobs
         List<LivingEntity> entities = player.level.getEntitiesOfClass(LivingEntity.class,
                 player.getBoundingBox().inflate(range), e -> e != player && e instanceof Mob);
 
@@ -36,27 +31,30 @@ public class BlueOrbActiveAbility {
             target.hurt(player.damageSources().playerAttack(player), damage);
         }
 
-        // Apply glowing effect to player
         player.addEffect(new MobEffectInstance(MobEffects.GLOWING, 100, 0, false, false));
-
-        // Play shockwave sound
         player.level.playSound(null, player.blockPosition(), SoundEvents.ENDERDRAGON_FLAP, SoundSource.PLAYERS, 1f, 1f);
 
-        // Spawn particles
         if (player.level instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(ParticleTypes.END_ROD,
                     player.getX(), player.getY() + 1, player.getZ(),
                     50, range, range / 2, range, 0.2);
         }
 
-        // Start cooldown
-        player.getPersistentData().putInt(COOLDOWN_TAG, COOLDOWN_TICKS);
+        setCooldown(player, COOLDOWN_TICKS);
     }
 
-    // Tick handler for cooldown countdown
-    public static void tick(Player player) {
-        if (player.getPersistentData().getInt(COOLDOWN_TAG) > 0) {
-            player.getPersistentData().putInt(COOLDOWN_TAG, player.getPersistentData().getInt(COOLDOWN_TAG) - 1);
+    public static void tickCooldown(Player player) {
+        int cooldown = getCooldown(player);
+        if (cooldown > 0) {
+            setCooldown(player, cooldown - 1);
         }
+    }
+
+    private static int getCooldown(Player player) {
+        return player.getPersistentData().getInt(COOLDOWN_TAG);
+    }
+
+    private static void setCooldown(Player player, int ticks) {
+        player.getPersistentData().putInt(COOLDOWN_TAG, ticks);
     }
 }

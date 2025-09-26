@@ -13,9 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.forlorncurios.procedures.BlueOrbWhileBaubleIsEquippedTickProcedure;
-import net.mcreator.forlorncurios.procedures.BlueOrbActiveAbility;
 import net.mcreator.forlorncurios.init.ModCuriosSlots;
-import net.mcreator.forlorncurios.init.ForlornCuriosModKeyMappings;
 
 import java.util.List;
 
@@ -42,12 +40,12 @@ public class BlueOrbItem extends Item implements ICurioItem {
     public void curioTick(String identifier, int index, SlotContext slotContext, ItemStack stack) {
         if (!(slotContext.entity() instanceof LivingEntity entity)) return;
 
-        // Passive tick procedure
-        BlueOrbWhileBaubleIsEquippedTickProcedure.execute(entity);
+        if (!entity.level().isClientSide()) {
+            BlueOrbWhileBaubleIsEquippedTickProcedure.execute(entity);
 
-        // Active ability
-        if (entity instanceof Player player && ForlornCuriosModKeyMappings.BLUE_ORBKEYBIND.isDown()) {
-            BlueOrbActiveAbility.execute(player);
+            if (entity instanceof Player player) {
+                BlueOrbActiveAbility.tickCooldown(player);
+            }
         }
     }
 }
