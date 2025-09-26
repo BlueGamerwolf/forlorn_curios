@@ -1,9 +1,0 @@
-{
-  "_fv": 57,
-  "_type": "curiosslot",
-  "definition": {
-    "texture": "miner_blessing.png",
-    "name": "Blue Orb Slot",
-    "amount": 1
-  }
-}

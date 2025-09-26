@@ -29,9 +29,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.forlorncurios.init.ForlornCuriosModTabs;
-import net.mcreator.forlorncurios.init.ForlornCuriosModItems;
-
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -49,10 +46,6 @@ public class ForlornCuriosMod {
 	public ForlornCuriosMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
-		ForlornCuriosModItems.REGISTRY.register(bus);
-
-		ForlornCuriosModTabs.REGISTRY.register(bus);
 
 	}
 
