@@ -1,4 +1,3 @@
-
 package net.mcreator.forlorncurios.network;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -6,58 +5,52 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.level.Level;
 
-import net.mcreator.forlorncurios.procedures.BlueOrbkeybindOnKeyPressedProcedure;
+import net.mcreator.forlorncurios.procedures.BlueOrbActiveAbility;
 import net.mcreator.forlorncurios.ForlornCuriosMod;
 
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class BlueOrbkeybindMessage {
-	int type, pressedms;
+public class BlueOrbKeybindMessage {
+    private final int type, pressedms;
 
-	public BlueOrbkeybindMessage(int type, int pressedms) {
-		this.type = type;
-		this.pressedms = pressedms;
-	}
+    public BlueOrbKeybindMessage(int type, int pressedms) {
+        this.type = type;
+        this.pressedms = pressedms;
+    }
 
-	public BlueOrbkeybindMessage(FriendlyByteBuf buffer) {
-		this.type = buffer.readInt();
-		this.pressedms = buffer.readInt();
-	}
+    public BlueOrbKeybindMessage(FriendlyByteBuf buffer) {
+        this.type = buffer.readInt();
+        this.pressedms = buffer.readInt();
+    }
 
-	public static void buffer(BlueOrbkeybindMessage message, FriendlyByteBuf buffer) {
-		buffer.writeInt(message.type);
-		buffer.writeInt(message.pressedms);
-	}
+    public static void buffer(BlueOrbKeybindMessage message, FriendlyByteBuf buffer) {
+        buffer.writeInt(message.type);
+        buffer.writeInt(message.pressedms);
+    }
 
-	public static void handler(BlueOrbkeybindMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			pressAction(context.getSender(), message.type, message.pressedms);
-		});
-		context.setPacketHandled(true);
-	}
+    public static void handler(BlueOrbKeybindMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+        NetworkEvent.Context context = contextSupplier.get();
+        context.enqueueWork(() -> {
+            Player player = context.getSender();
+            if (player != null && message.type == 0) {
+                BlueOrbActiveAbility.execute(player);
+            }
+        });
+        context.setPacketHandled(true);
+    }
 
-	public static void pressAction(Player entity, int type, int pressedms) {
-		Level world = entity.level();
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(entity.blockPosition()))
-			return;
-		if (type == 0) {
-
-			BlueOrbkeybindOnKeyPressedProcedure.execute();
-		}
-	}
-
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		ForlornCuriosMod.addNetworkMessage(BlueOrbkeybindMessage.class, BlueOrbkeybindMessage::buffer, BlueOrbkeybindMessage::new, BlueOrbkeybindMessage::handler);
-	}
+    @SubscribeEvent
+    public static void register() {
+    ForlornCuriosMod.addNetworkMessage(
+        BlueOrbKeybindMessage.class,
+        BlueOrbKeybindMessage::buffer,
+        BlueOrbKeybindMessage::new,
+        BlueOrbKeybindMessage::handler
+    );
+}
 }
