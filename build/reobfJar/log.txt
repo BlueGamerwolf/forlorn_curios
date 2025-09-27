@@ -195,10 +195,8 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   net/mcreator/forlorncurios/item/
   net/mcreator/forlorncurios/item/BlueOrbItem.class
   net/mcreator/forlorncurios/network/
-  net/mcreator/forlorncurios/network/BlueOrbkeybindMessage.class
+  net/mcreator/forlorncurios/network/BlueOrbkeyMessage.class
   net/mcreator/forlorncurios/procedures/
-  net/mcreator/forlorncurios/procedures/BlueOrbBaubleIsEquippedProcedure.class
-  net/mcreator/forlorncurios/procedures/BlueOrbBaubleIsUnequippedProcedure.class
   net/mcreator/forlorncurios/procedures/BlueOrbWhileBaubleIsEquippedTickProcedure.class
-  net/mcreator/forlorncurios/procedures/BlueOrbkeybindOnKeyPressedProcedure.class
+  net/mcreator/forlorncurios/procedures/BlueOrbkeyOnKeyPressedProcedure.class
   pack.mcmeta

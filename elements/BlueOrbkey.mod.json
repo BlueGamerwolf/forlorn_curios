@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Blue Orb",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "BlueOrbkeyOnKeyPressed"
+    }
+  }
+}

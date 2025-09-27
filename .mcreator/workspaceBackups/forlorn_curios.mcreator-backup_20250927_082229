@@ -11,76 +11,98 @@
         "files": [
           "src/main/resources/data/curios/tags/items/blue_orb_slot.json"
         ]
-      }
-    },
-    {
-      "name": "BlueOrb",
-      "type": "curiosbauble",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_orb",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/forlorncurios/item/BlueOrbItem.java",
-          "src/main/resources/assets/forlorn_curios/models/item/blue_orb.json"
-        ]
-      }
+      },
+      "path": "~/slots"
     },
     {
       "name": "BlueOrbWhileBaubleIsEquippedTick",
       "type": "procedure",
-      "sortid": 3,
+      "sortid": 1,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "blue_orb_while_bauble_is_equipped_tick",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/forlorncurios/procedures/BlueOrbWhileBaubleIsEquippedTickProcedure.java"
         ],
         "dependencies": []
-      }
+      },
+      "path": "~/scripts"
     },
     {
-      "name": "BlueOrbBaubleIsEquipped",
+      "name": "BlueOrb",
+      "type": "curiosbauble",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_orb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/forlorncurios/item/BlueOrbItem.java",
+          "src/main/resources/assets/forlorn_curios/models/item/blue_orb.json"
+        ]
+      },
+      "path": "~/item"
+    },
+    {
+      "name": "BlueOrbkeyOnKeyPressed",
       "type": "procedure",
       "sortid": 4,
       "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_orb_bauble_is_equipped",
+      "locked_code": true,
+      "registry_name": "blue_orbkey_on_key_pressed",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/forlorncurios/procedures/BlueOrbBaubleIsEquippedProcedure.java"
+          "src/main/java/net/mcreator/forlorncurios/procedures/BlueOrbkeyOnKeyPressedProcedure.java"
         ],
         "dependencies": []
-      }
+      },
+      "path": "~/scripts"
     },
     {
-      "name": "BlueOrbBaubleIsUnequipped",
-      "type": "procedure",
+      "name": "BlueOrbkey",
+      "type": "keybind",
       "sortid": 5,
       "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_orb_bauble_is_unequipped",
+      "locked_code": true,
+      "registry_name": "blue_orbkey",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/forlorncurios/procedures/BlueOrbBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": []
-      }
+          "src/main/java/net/mcreator/forlorncurios/network/BlueOrbkeyMessage.java"
+        ]
+      },
+      "path": "~/keybinds"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "key.forlorn_curios.blue_orbkey": "Blue Orb",
       "item.forlorn_curios.blue_orb": "Blue Orb",
-      "curios.identifier.blue_orb_slot": "Blue Orb Slot"
+      "curios.identifier.blue_orb_slot": "Blue Orb"
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "scripts",
+        "children": []
+      },
+      {
+        "name": "slots",
+        "children": []
+      },
+      {
+        "name": "item",
+        "children": []
+      },
+      {
+        "name": "keybinds",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "forlorn_curios",
