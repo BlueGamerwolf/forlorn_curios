@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "curiosslot",
+  "definition": {
+    "texture": "egg.png",
+    "name": "Blue Egg",
+    "amount": 1
+  }
+}

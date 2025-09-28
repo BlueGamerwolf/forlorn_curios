@@ -25,6 +25,7 @@ public class ForlornCuriosModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(ForlornCuriosModItems.BLUE_ORB.get());
 			tabData.accept(ForlornCuriosModItems.WARDEN_HEART.get());
+			tabData.accept(ForlornCuriosModItems.BLUE_EGG.get());
 		}
 	}
 }

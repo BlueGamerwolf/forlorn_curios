@@ -137,6 +137,8 @@ Adding input to inheritance map
 Processing entries
 Conflicting propagated mapping for net/mcreator/forlorncurios/init/ForlornCuriosModKeyMappings$1/setDown(Z)V from net/minecraft/client/KeyMapping/setDown(Z)V: setDown -> m_7249_
 Conflicting propagated mapping for net/mcreator/forlorncurios/item/BlueOrbItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/forlorncurios/item/BlueEggItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/forlorncurios/item/WardenHeartItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
 Conflicting propagated mapping for net/minecraftforge/event/BuildCreativeModeTabContentsEvent/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V from net/minecraft/world/item/CreativeModeTab$Output/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V: accept -> m_246267_
 Conflicting propagated mapping for net/minecraft/world/entity/LivingEntity/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V from net/minecraft/world/entity/player/Player/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V: lambda$addAdditionalSaveData$3 -> m_219754_
 Adding extras
@@ -149,6 +151,7 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   assets/curios/
   assets/curios/textures/
   assets/curios/textures/slot/
+  assets/curios/textures/slot/egg.png
   assets/curios/textures/slot/heart_of_the_deep.png
   assets/curios/textures/slot/miner_blessing.png
   assets/forlorn_curios/
@@ -156,13 +159,16 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   assets/forlorn_curios/lang/en_us.json
   assets/forlorn_curios/models/
   assets/forlorn_curios/models/item/
+  assets/forlorn_curios/models/item/blue_egg.json
   assets/forlorn_curios/models/item/blue_orb.json
+  assets/forlorn_curios/models/item/warden_heart.json
   assets/forlorn_curios/textures/
   assets/forlorn_curios/textures/item/
   assets/forlorn_curios/textures/item/blue_egg.png
   assets/forlorn_curios/textures/item/ender_pearl.png
   assets/forlorn_curios/textures/item/heart_of_the_deep.png
   assets/forlorn_curios/textures/screens/
+  assets/forlorn_curios/textures/screens/egg.png
   assets/forlorn_curios/textures/screens/heart_of_the_deep.png
   assets/forlorn_curios/textures/screens/miner_blessing.png
   data/
@@ -171,6 +177,7 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   data/curios/tags/items/
   data/curios/tags/items/back.json
   data/curios/tags/items/belt.json
+  data/curios/tags/items/blue_egg_slot.json
   data/curios/tags/items/blue_orb_slot.json
   data/curios/tags/items/body.json
   data/curios/tags/items/bracelet.json
@@ -181,10 +188,16 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   data/curios/tags/items/necklace.json
   data/curios/tags/items/ring.json
   data/curios/tags/items/warden.json
+  mixins.forlorn_curios.json
+  mixins.forlorncurios.json
+  mixins.forlorncurios.refmap.json
   net/
   net/mcreator/
   net/mcreator/forlorncurios/
   net/mcreator/forlorncurios/ForlornCuriosMod.class
+  net/mcreator/forlorncurios/events/
+  net/mcreator/forlorncurios/events/CuriosItemDetectHandler.class
+  net/mcreator/forlorncurios/events/WardenDamageImmunityEvent.class
   net/mcreator/forlorncurios/init/
   net/mcreator/forlorncurios/init/ForlornCuriosModCuriosProperties.class
   net/mcreator/forlorncurios/init/ForlornCuriosModCuriosRenderers.class
@@ -197,10 +210,13 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   net/mcreator/forlorncurios/init/ForlornCuriosModLayerDefinitions.class
   net/mcreator/forlorncurios/init/ForlornCuriosModTabs.class
   net/mcreator/forlorncurios/item/
+  net/mcreator/forlorncurios/item/BlueEggItem.class
   net/mcreator/forlorncurios/item/BlueOrbItem.class
+  net/mcreator/forlorncurios/item/WardenHeartItem.class
   net/mcreator/forlorncurios/network/
   net/mcreator/forlorncurios/network/BlueOrbkeyMessage.class
   net/mcreator/forlorncurios/procedures/
+  net/mcreator/forlorncurios/procedures/BlueEggWhileBaubleIsEquippedTickProcedure.class
   net/mcreator/forlorncurios/procedures/BlueOrbWhileBaubleIsEquippedTickProcedure.class
   net/mcreator/forlorncurios/procedures/BlueOrbkeyOnKeyPressedProcedure.class
   net/mcreator/forlorncurios/procedures/WardenHeartWhileBaubleIsEquippedTickProcedure.class

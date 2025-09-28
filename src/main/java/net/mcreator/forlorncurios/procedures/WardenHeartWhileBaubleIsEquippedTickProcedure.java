@@ -8,6 +8,10 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.server.level.ServerLevel;
 
+
+import net.mcreator.forlorncurios.init.ForlornCuriosModItems;
+import net.mcreator.forlorncurios.events.CuriosItemDetectHandler;
+
 import java.util.List;
 
 public class WardenHeartWhileBaubleIsEquippedTickProcedure {
@@ -15,6 +19,9 @@ public class WardenHeartWhileBaubleIsEquippedTickProcedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof Player player))
+			return;
+		// ✅ Check if player has Warden Heart equipped
+		if (!CuriosItemDetectHandler.playerHasCurio(player, stack -> stack.getItem() == ForlornCuriosModItems.WARDEN_HEART.get()))
 			return;
 		int tickCooldown = player.getPersistentData().getInt("warden_heart_tick_cooldown");
 		int heartCooldown = player.getPersistentData().getInt("warden_heart_timer");
@@ -37,7 +44,7 @@ public class WardenHeartWhileBaubleIsEquippedTickProcedure {
 		} else {
 			player.getPersistentData().putInt("warden_heart_tick_cooldown", tickCooldown - 1);
 		}
-		// Heartbeat logic
+		// Heartbeat sound logic
 		if (heartCooldown <= 0) {
 			float volume = 0.6f;
 			float pitch = 1.0f;
