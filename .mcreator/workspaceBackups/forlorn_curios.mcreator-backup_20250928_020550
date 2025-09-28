@@ -48,7 +48,7 @@
       "name": "BlueOrbkeyOnKeyPressed",
       "type": "procedure",
       "sortid": 4,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "blue_orbkey_on_key_pressed",
       "metadata": {
@@ -72,14 +72,60 @@
         ]
       },
       "path": "~/keybinds"
+    },
+    {
+      "name": "Warden",
+      "type": "curiosslot",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warden",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/warden.json"
+        ]
+      },
+      "path": "~/slots"
+    },
+    {
+      "name": "WardenHeartWhileBaubleIsEquippedTick",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "warden_heart_while_bauble_is_equipped_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/forlorncurios/procedures/WardenHeartWhileBaubleIsEquippedTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/scripts"
+    },
+    {
+      "name": "WardenHeart",
+      "type": "curiosbauble",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warden_heart",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forlorn_curios/models/item/warden_heart.json",
+          "src/main/java/net/mcreator/forlorncurios/item/WardenHeartItem.java"
+        ]
+      },
+      "path": "~/item"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "curios.identifier.warden": "Warden",
       "key.forlorn_curios.blue_orbkey": "Blue Orb",
       "item.forlorn_curios.blue_orb": "Blue Orb",
+      "item.forlorn_curios.warden_heart": "Warden Heart",
       "curios.identifier.blue_orb_slot": "Blue Orb"
     }
   },

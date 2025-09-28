@@ -1,5 +1,7 @@
 {
+  "curios.identifier.warden": "Warden",
   "key.forlorn_curios.blue_orbkey": "Blue Orb",
   "item.forlorn_curios.blue_orb": "Blue Orb",
+  "item.forlorn_curios.warden_heart": "Warden Heart",
   "curios.identifier.blue_orb_slot": "Blue Orb"
 }

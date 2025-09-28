@@ -149,6 +149,7 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   assets/curios/
   assets/curios/textures/
   assets/curios/textures/slot/
+  assets/curios/textures/slot/heart_of_the_deep.png
   assets/curios/textures/slot/miner_blessing.png
   assets/forlorn_curios/
   assets/forlorn_curios/lang/
@@ -160,7 +161,9 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   assets/forlorn_curios/textures/item/
   assets/forlorn_curios/textures/item/blue_egg.png
   assets/forlorn_curios/textures/item/ender_pearl.png
+  assets/forlorn_curios/textures/item/heart_of_the_deep.png
   assets/forlorn_curios/textures/screens/
+  assets/forlorn_curios/textures/screens/heart_of_the_deep.png
   assets/forlorn_curios/textures/screens/miner_blessing.png
   data/
   data/curios/
@@ -177,6 +180,7 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   data/curios/tags/items/head.json
   data/curios/tags/items/necklace.json
   data/curios/tags/items/ring.json
+  data/curios/tags/items/warden.json
   net/
   net/mcreator/
   net/mcreator/forlorncurios/
@@ -199,4 +203,5 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   net/mcreator/forlorncurios/procedures/
   net/mcreator/forlorncurios/procedures/BlueOrbWhileBaubleIsEquippedTickProcedure.class
   net/mcreator/forlorncurios/procedures/BlueOrbkeyOnKeyPressedProcedure.class
+  net/mcreator/forlorncurios/procedures/WardenHeartWhileBaubleIsEquippedTickProcedure.class
   pack.mcmeta

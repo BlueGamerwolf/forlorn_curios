@@ -48,7 +48,7 @@
       "name": "BlueOrbkeyOnKeyPressed",
       "type": "procedure",
       "sortid": 4,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "blue_orbkey_on_key_pressed",
       "metadata": {
@@ -72,12 +72,27 @@
         ]
       },
       "path": "~/keybinds"
+    },
+    {
+      "name": "Warden",
+      "type": "curiosslot",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warden",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/warden.json"
+        ]
+      },
+      "path": "~/slots"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "curios.identifier.warden": "Warden",
       "key.forlorn_curios.blue_orbkey": "Blue Orb",
       "item.forlorn_curios.blue_orb": "Blue Orb",
       "curios.identifier.blue_orb_slot": "Blue Orb"

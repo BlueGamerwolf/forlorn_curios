@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "curiosslot",
+  "definition": {
+    "texture": "heart_of_the_deep.png",
+    "name": "Warden",
+    "amount": 1
+  }
+}

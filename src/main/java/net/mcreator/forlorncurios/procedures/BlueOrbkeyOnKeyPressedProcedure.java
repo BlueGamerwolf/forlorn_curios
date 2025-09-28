@@ -1,37 +1,65 @@
-import top.theillusivec4.curios.api.CuriosApi;
-import top.theillusivec4.curios.api.type.inventory.ICurioStacksHandler;
-import top.theillusivec4.curios.api.type.inventory.ICurioStack;
+package net.mcreator.forlorncurios.procedures;
+
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.network.chat.Component;
 
+import net.mcreator.forlorncurios.item.BlueOrbItem;
+
+import top.theillusivec4.curios.api.CuriosApi;
+
+import java.util.UUID;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
 
 public class BlueOrbkeyOnKeyPressedProcedure {
+    // Store cooldowns per player
+    private static final Map<UUID, Long> cooldowns = new HashMap<>();
+    private static final long COOLDOWN_TICKS = 400; 
+
     public static void execute(LevelAccessor world, Entity entity) {
-        if (entity == null || world == null) return;
-        if (!(entity instanceof Player player)) return;
+        if (entity == null || !(entity instanceof Player player))
+            return;
 
-        // ✅ Check if player has Blue Orb equipped
-        var equippedCurios = CuriosApi.getCuriosHelper().getEquippedCurios(player);
-        boolean hasBlueOrb = equippedCurios.stream()
-            .anyMatch(curio -> curio.getItem() instanceof BlueOrbItem);
+        // ✅ Check if the player has the Blue Orb equipped
+        boolean hasBlueOrb = !CuriosApi.getCuriosHelper()
+                .findCurios(player, stack -> stack.getItem() instanceof BlueOrbItem)
+                .isEmpty();
 
-        if (!hasBlueOrb) {
+        if (!hasBlueOrb)
+            return;
+
+        // ✅ Handle cooldown
+        long gameTime = ((Level) world).getGameTime();
+        UUID playerId = player.getUUID();
+        long lastUse = cooldowns.getOrDefault(playerId, 0L);
+
+        if (gameTime - lastUse < COOLDOWN_TICKS) {
+            long ticksLeft = COOLDOWN_TICKS - (gameTime - lastUse);
+            long secondsLeft = ticksLeft / 20; // Convert to seconds
+
+            // ⏳ Send cooldown feedback (action bar)
             if (!world.isClientSide()) {
-                player.displayClientMessage(Component.literal("Item is not equipped"), true);
+                player.displayClientMessage(
+                        Component.literal("⚡ Ability on cooldown (" + secondsLeft + "s)"),
+                        true // true = action bar
+                );
             }
-            return; // Stop ability if not equipped
+            return;
         }
 
-        // Summon lightning in a 5-block radius
+        // Update cooldown
+        cooldowns.put(playerId, gameTime);
+
+        // ⚡ Lightning ability
         if (world instanceof Level level && !level.isClientSide()) {
             BlockPos playerPos = player.blockPosition();
             for (int dx = -5; dx <= 5; dx++) {
@@ -41,18 +69,16 @@ public class BlueOrbkeyOnKeyPressedProcedure {
                         LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
                         if (lightning != null) {
                             lightning.moveTo(pos.getX(), pos.getY(), pos.getZ());
-
-                            // Safe cause assignment
                             if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
                                 lightning.setCause(serverPlayer);
                             }
-
                             level.addFreshEntity(lightning);
                         }
                     }
                 }
             }
 
+            // Damage nearby mobs
             List<Entity> entities = level.getEntities(player, AABB.unitCubeFromLowerCorner(player.position()).inflate(5));
             for (Entity target : entities) {
                 if (target != player && target instanceof LivingEntity living) {

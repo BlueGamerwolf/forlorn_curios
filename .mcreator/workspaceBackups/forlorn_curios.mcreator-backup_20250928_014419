@@ -48,7 +48,7 @@
       "name": "BlueOrbkeyOnKeyPressed",
       "type": "procedure",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "blue_orbkey_on_key_pressed",
       "metadata": {
@@ -63,7 +63,7 @@
       "name": "BlueOrbkey",
       "type": "keybind",
       "sortid": 5,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "blue_orbkey",
       "metadata": {
