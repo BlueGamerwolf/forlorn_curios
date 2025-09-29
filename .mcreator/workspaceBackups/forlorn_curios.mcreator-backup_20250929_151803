@@ -160,6 +160,35 @@
         ]
       },
       "path": "~/item"
+    },
+    {
+      "name": "Owner",
+      "type": "curiosslot",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/owner.json"
+        ]
+      },
+      "path": "~/slots"
+    },
+    {
+      "name": "OwnerBadge",
+      "type": "curiosbauble",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "owner_badge",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forlorn_curios/models/item/owner_badge.json",
+          "src/main/java/net/mcreator/forlorncurios/item/OwnerBadgeItem.java"
+        ]
+      },
+      "path": "~/item"
     }
   ],
   "variable_elements": [],
@@ -172,7 +201,9 @@
       "item.forlorn_curios.blue_orb": "Blue Orb",
       "item.forlorn_curios.warden_heart": "Warden Heart",
       "curios.identifier.blue_egg_slot": "Blue Egg",
-      "curios.identifier.blue_orb_slot": "Blue Orb"
+      "curios.identifier.blue_orb_slot": "Blue Orb",
+      "item.forlorn_curios.owner_badge": "Owner Badge",
+      "curios.identifier.owner": "Owner"
     }
   },
   "foldersRoot": {

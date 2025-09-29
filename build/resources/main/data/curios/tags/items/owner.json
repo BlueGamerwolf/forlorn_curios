@@ -1,0 +1,7 @@
+{
+  "replace": "false",
+  "values": [
+    "minecraft:air",
+    "forlorn_curios:owner_badge"
+  ]
+}

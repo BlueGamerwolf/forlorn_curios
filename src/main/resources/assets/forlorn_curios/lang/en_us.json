@@ -5,5 +5,7 @@
   "item.forlorn_curios.blue_orb": "Blue Orb",
   "item.forlorn_curios.warden_heart": "Warden Heart",
   "curios.identifier.blue_egg_slot": "Blue Egg",
-  "curios.identifier.blue_orb_slot": "Blue Orb"
+  "curios.identifier.blue_orb_slot": "Blue Orb",
+  "item.forlorn_curios.owner_badge": "Owner Badge",
+  "curios.identifier.owner": "Owner"
 }

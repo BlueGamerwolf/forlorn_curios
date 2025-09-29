@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "curiosslot",
+  "definition": {
+    "texture": "badge_slot.png",
+    "name": "Owner",
+    "amount": 1
+  }
+}

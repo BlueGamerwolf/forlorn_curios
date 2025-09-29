@@ -26,6 +26,7 @@ public class ForlornCuriosModTabs {
 			tabData.accept(ForlornCuriosModItems.BLUE_ORB.get());
 			tabData.accept(ForlornCuriosModItems.WARDEN_HEART.get());
 			tabData.accept(ForlornCuriosModItems.BLUE_EGG.get());
+			tabData.accept(ForlornCuriosModItems.OWNER_BADGE.get());
 		}
 	}
 }

@@ -116,6 +116,79 @@
         ]
       },
       "path": "~/item"
+    },
+    {
+      "name": "BlueEggSlot",
+      "type": "curiosslot",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_egg_slot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/blue_egg_slot.json"
+        ]
+      },
+      "path": "~/slots"
+    },
+    {
+      "name": "BlueEggWhileBaubleIsEquippedTick",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_egg_while_bauble_is_equipped_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/forlorncurios/procedures/BlueEggWhileBaubleIsEquippedTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/scripts"
+    },
+    {
+      "name": "BlueEgg",
+      "type": "curiosbauble",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_egg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/forlorncurios/item/BlueEggItem.java",
+          "src/main/resources/assets/forlorn_curios/models/item/blue_egg.json"
+        ]
+      },
+      "path": "~/item"
+    },
+    {
+      "name": "Owner",
+      "type": "curiosslot",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/owner.json"
+        ]
+      },
+      "path": "~/slots"
+    },
+    {
+      "name": "OwnerBadge",
+      "type": "curiosbauble",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "owner_badge",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forlorn_curios/models/item/owner_badge.json",
+          "src/main/java/net/mcreator/forlorncurios/item/OwnerBadgeItem.java"
+        ]
+      },
+      "path": "~/item"
     }
   ],
   "variable_elements": [],
@@ -123,10 +196,14 @@
   "language_map": {
     "en_us": {
       "curios.identifier.warden": "Warden",
+      "item.forlorn_curios.blue_egg": "Blue Egg",
       "key.forlorn_curios.blue_orbkey": "Blue Orb",
       "item.forlorn_curios.blue_orb": "Blue Orb",
       "item.forlorn_curios.warden_heart": "Warden Heart",
-      "curios.identifier.blue_orb_slot": "Blue Orb"
+      "curios.identifier.blue_egg_slot": "Blue Egg",
+      "curios.identifier.blue_orb_slot": "Blue Orb",
+      "item.forlorn_curios.owner_badge": "Owner Badge",
+      "curios.identifier.owner": "Owner"
     }
   },
   "foldersRoot": {

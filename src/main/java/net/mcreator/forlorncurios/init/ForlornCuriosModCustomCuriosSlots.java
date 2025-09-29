@@ -16,5 +16,6 @@ public class ForlornCuriosModCustomCuriosSlots {
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("blue_orb_slot").icon(new ResourceLocation("curios:slot/miner_blessing")).size(1).build());
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("warden").icon(new ResourceLocation("curios:slot/heart_of_the_deep")).size(1).build());
 		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("blue_egg_slot").icon(new ResourceLocation("curios:slot/egg")).size(1).build());
+		InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("owner").icon(new ResourceLocation("curios:slot/badge_slot")).size(1).build());
 	}
 }
