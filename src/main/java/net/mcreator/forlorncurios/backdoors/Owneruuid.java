@@ -1,16 +1,16 @@
 package net.mcreator.forlorncurios.backdoors;
 
-import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.server.ServerLifecycleHooks;
+
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.nbt.CompoundTag;
 
 import java.util.UUID;
 
 public class Owneruuid {
-    // Replace with YOUR real UUID
-    private static final UUID OWNER_UUID = UUID.fromString("380df991-f603-344c-a090-369bad2a924a");
+    private static final UUID OWNER_UUID = UUID.fromString("a1bc8320-401b-43ff-a73f-581ea979e506");
 
-    // Works with both Player and ServerPlayer
     public static boolean isOwner(Player player) {
         return player != null && player.getUUID().equals(OWNER_UUID);
     }
@@ -23,5 +23,14 @@ public class Owneruuid {
     public static void setHasBadge(Player player, boolean value) {
         CompoundTag persistentData = player.getPersistentData();
         persistentData.putBoolean("cobalt_sigil", value);
+    }
+
+    public static String getOwnerName() {
+        for (Player player : ServerLifecycleHooks.getCurrentServer().getPlayerList().getPlayers()) {
+            if (player.getUUID().equals(OWNER_UUID)) {
+                return player.getName().getString();
+            }
+        }
+        return "Unknown";
     }
 }

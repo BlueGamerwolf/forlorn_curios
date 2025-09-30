@@ -135,12 +135,28 @@ Adding Libraries to Inheritance
 Reading Input: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\libs\modid-1.0.jar
 Adding input to inheritance map
 Processing entries
+Conflicting propagated mapping for net/mcreator/forlorncurios/enchantment/SoulBoundEnchantment/isTreasureOnly()Z from net/minecraft/world/item/enchantment/Enchantment/isTreasureOnly()Z: isTreasureOnly -> m_6591_
 Conflicting propagated mapping for net/mcreator/forlorncurios/init/ForlornCuriosModKeyMappings$1/setDown(Z)V from net/minecraft/client/KeyMapping/setDown(Z)V: setDown -> m_7249_
-Conflicting propagated mapping for net/mcreator/forlorncurios/item/BlueOrbItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/forlorncurios/item/OwnerBadgeItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/forlorncurios/item/OwnerBadgeItem/isFoil(Lnet/minecraft/world/item/ItemStack;)Z from net/minecraft/world/item/Item/isFoil(Lnet/minecraft/world/item/ItemStack;)Z: isFoil -> m_5812_
 Conflicting propagated mapping for net/mcreator/forlorncurios/item/BlueEggItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
 Conflicting propagated mapping for net/mcreator/forlorncurios/item/WardenHeartItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for net/mcreator/forlorncurios/item/BlueOrbItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
 Conflicting propagated mapping for net/minecraftforge/event/BuildCreativeModeTabContentsEvent/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V from net/minecraft/world/item/CreativeModeTab$Output/accept(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V: accept -> m_246267_
 Conflicting propagated mapping for net/minecraft/world/entity/LivingEntity/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V from net/minecraft/world/entity/player/Player/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V: lambda$addAdditionalSaveData$3 -> m_219754_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/of(Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/of(Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/item/crafting/Ingredient;: of -> m_204132_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/of(Ljava/util/stream/Stream;)Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/of(Ljava/util/stream/Stream;)Lnet/minecraft/world/item/crafting/Ingredient;: of -> m_43921_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/of()Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/of()Lnet/minecraft/world/item/crafting/Ingredient;: of -> m_151265_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/of([Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/of([Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/crafting/Ingredient;: of -> m_43927_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/fromNetwork(Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/fromNetwork(Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/item/crafting/Ingredient;: fromNetwork -> m_43940_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/fromJson(Lcom/google/gson/JsonElement;)Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/fromJson(Lcom/google/gson/JsonElement;)Lnet/minecraft/world/item/crafting/Ingredient;: fromJson -> m_43917_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/toJson()Lcom/google/gson/JsonElement; from net/minecraft/world/item/crafting/Ingredient/toJson()Lcom/google/gson/JsonElement;: toJson -> m_43942_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/fromValues(Ljava/util/stream/Stream;)Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/fromValues(Ljava/util/stream/Stream;)Lnet/minecraft/world/item/crafting/Ingredient;: fromValues -> m_43938_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/AbstractIngredient/of([Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/item/crafting/Ingredient; from net/minecraft/world/item/crafting/Ingredient/of([Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/item/crafting/Ingredient;: of -> m_43929_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/CompoundIngredient/getItems()[Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/item/crafting/Ingredient/getItems()[Lnet/minecraft/world/item/ItemStack;: getItems -> m_43908_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/CompoundIngredient/isEmpty()Z from net/minecraft/world/item/crafting/Ingredient/isEmpty()Z: isEmpty -> m_43947_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/CompoundIngredient/toJson()Lcom/google/gson/JsonElement; from net/minecraftforge/common/crafting/AbstractIngredient/toJson()Lcom/google/gson/JsonElement;: toJson -> m_43942_
+Conflicting propagated mapping for net/minecraftforge/common/crafting/CompoundIngredient/getStackingIds()Lit/unimi/dsi/fastutil/ints/IntList; from net/minecraft/world/item/crafting/Ingredient/getStackingIds()Lit/unimi/dsi/fastutil/ints/IntList;: getStackingIds -> m_43931_
 Adding extras
 Sorting
 Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\output.jar
@@ -151,6 +167,7 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   assets/curios/
   assets/curios/textures/
   assets/curios/textures/slot/
+  assets/curios/textures/slot/badge_slot.png
   assets/curios/textures/slot/egg.png
   assets/curios/textures/slot/heart_of_the_deep.png
   assets/curios/textures/slot/miner_blessing.png
@@ -161,13 +178,16 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   assets/forlorn_curios/models/item/
   assets/forlorn_curios/models/item/blue_egg.json
   assets/forlorn_curios/models/item/blue_orb.json
+  assets/forlorn_curios/models/item/owner_badge.json
   assets/forlorn_curios/models/item/warden_heart.json
   assets/forlorn_curios/textures/
   assets/forlorn_curios/textures/item/
+  assets/forlorn_curios/textures/item/badge.png
   assets/forlorn_curios/textures/item/blue_egg.png
   assets/forlorn_curios/textures/item/ender_pearl.png
   assets/forlorn_curios/textures/item/heart_of_the_deep.png
   assets/forlorn_curios/textures/screens/
+  assets/forlorn_curios/textures/screens/badge_slot.png
   assets/forlorn_curios/textures/screens/egg.png
   assets/forlorn_curios/textures/screens/heart_of_the_deep.png
   assets/forlorn_curios/textures/screens/miner_blessing.png
@@ -186,6 +206,7 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   data/curios/tags/items/hands.json
   data/curios/tags/items/head.json
   data/curios/tags/items/necklace.json
+  data/curios/tags/items/owner.json
   data/curios/tags/items/ring.json
   data/curios/tags/items/warden.json
   mixins.forlorn_curios.json
@@ -195,14 +216,22 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   net/mcreator/
   net/mcreator/forlorncurios/
   net/mcreator/forlorncurios/ForlornCuriosMod.class
+  net/mcreator/forlorncurios/backdoors/
+  net/mcreator/forlorncurios/backdoors/Owneruuid.class
+  net/mcreator/forlorncurios/enchantment/
+  net/mcreator/forlorncurios/enchantment/SoulBoundEnchantment.class
   net/mcreator/forlorncurios/events/
   net/mcreator/forlorncurios/events/CuriosItemDetectHandler.class
+  net/mcreator/forlorncurios/events/OwnerBadgeSoulbound.class
+  net/mcreator/forlorncurios/events/OwnerJoinHandler.class
   net/mcreator/forlorncurios/events/WardenDamageImmunityEvent.class
+  net/mcreator/forlorncurios/events/WardenTargetEventHandler.class
   net/mcreator/forlorncurios/init/
   net/mcreator/forlorncurios/init/ForlornCuriosModCuriosProperties.class
   net/mcreator/forlorncurios/init/ForlornCuriosModCuriosRenderers.class
   net/mcreator/forlorncurios/init/ForlornCuriosModCuriosSlots.class
   net/mcreator/forlorncurios/init/ForlornCuriosModCustomCuriosSlots.class
+  net/mcreator/forlorncurios/init/ForlornCuriosModEnchantments.class
   net/mcreator/forlorncurios/init/ForlornCuriosModItems.class
   net/mcreator/forlorncurios/init/ForlornCuriosModKeyMappings$1.class
   net/mcreator/forlorncurios/init/ForlornCuriosModKeyMappings$KeyEventListener.class
@@ -212,6 +241,7 @@ Writing Output: C:\Users\bluem\MCreatorWorkspaces\forlorn_curios\build\reobfJar\
   net/mcreator/forlorncurios/item/
   net/mcreator/forlorncurios/item/BlueEggItem.class
   net/mcreator/forlorncurios/item/BlueOrbItem.class
+  net/mcreator/forlorncurios/item/OwnerBadgeItem.class
   net/mcreator/forlorncurios/item/WardenHeartItem.class
   net/mcreator/forlorncurios/network/
   net/mcreator/forlorncurios/network/BlueOrbkeyMessage.class
